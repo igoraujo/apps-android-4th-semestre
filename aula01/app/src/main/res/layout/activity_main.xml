@@ -4,9 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.com.cotemig.aula01.MainActivity"
     android:orientation="vertical"
-    >
+    android:background="@color/preto"
+    tools:context="br.com.cotemig.aula01.MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:textColor="#ffffff"
+            android:textSize="48sp"
+            android:gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,8 +36,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/c"
             android:backgroundTint="@color/cinza"
             android:textSize="30dp"
@@ -29,8 +47,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/mais_menos"
             android:backgroundTint="@color/cinza"
             android:textSize="30dp"
@@ -39,8 +57,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/perc"
             android:backgroundTint="@color/cinza"
             android:textSize="30dp"
@@ -50,8 +68,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/div"
             android:backgroundTint="@color/cinza"
             android:textSize="30dp"
@@ -68,29 +86,31 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/sete"
             android:backgroundTint="@color/laranja"
             android:textSize="30dp"
+            android:id="@+id/btn07"
             />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/oito"
             android:backgroundTint="@color/laranja"
             android:textSize="30dp"
+            android:id="@+id/btn08"
             />
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/nove"
             android:backgroundTint="@color/laranja"
             android:textSize="30dp"
@@ -100,11 +120,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/mult"
             android:backgroundTint="@color/cinza"
             android:textSize="30dp"
+            android:id="@+id/btn09"
             />
     </LinearLayout>
 
@@ -118,40 +139,43 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/quatro"
             android:backgroundTint="@color/laranja"
             android:textSize="30dp"
+            android:id="@+id/btn04"
             />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/cinco"
             android:backgroundTint="@color/laranja"
             android:textSize="30dp"
+            android:id="@+id/btn05"
             />
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/seis"
             android:backgroundTint="@color/laranja"
             android:textSize="30dp"
+            android:id="@+id/btn06"
             />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/soma"
             android:backgroundTint="@color/cinza"
             android:textSize="30dp"
@@ -168,43 +192,47 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/um"
             android:backgroundTint="@color/laranja"
             android:textSize="30dp"
+            android:id="@+id/btn01"
             />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/dois"
             android:backgroundTint="@color/laranja"
             android:textSize="30dp"
+            android:id="@+id/btn02"
             />
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/tres"
             android:backgroundTint="@color/laranja"
             android:textSize="30dp"
+            android:id="@+id/btn03"
             />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/sub"
             android:backgroundTint="@color/cinza"
             android:textSize="30dp"
+            android:id="@+id/buttonSub"
             />
     </LinearLayout>
 
@@ -217,23 +245,25 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:textColor="#fff"
-            android:background="#000"
+            android:layout_weight="1.5"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/zero"
             android:backgroundTint="@color/laranja"
             android:textSize="30dp"
+            android:id="@+id/btn00"
             />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:textColor="#fff"
-            android:background="#000"
+            android:layout_weight="1.5"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/ponto"
             android:backgroundTint="@color/laranja"
             android:textSize="30dp"
+            android:id="@+id/btnPonto"
             />
 
 
@@ -241,11 +271,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:background="#000"
+            android:textColor="@color/branco"
+            android:background="@color/preto"
             android:text="@string/igual"
             android:backgroundTint="@color/cinza"
             android:textSize="30dp"
+            android:id="@+id/btnIgual"
             />
     </LinearLayout>
 
