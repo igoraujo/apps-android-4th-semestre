@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CauculoIMC</string>
+    <string name="peso">Peso</string>
+    <string name="altura">Altura</string>
+    <string name="calcular">Calcular</string>
+    <string name="msg">Resultado</string>
+</resources>
