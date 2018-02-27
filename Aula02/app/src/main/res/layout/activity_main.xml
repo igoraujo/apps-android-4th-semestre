@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="aula02.cotemig.com.br.aula02.MainActivity">
+
+    <Button
+        android:id="@+id/btn01"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BOTAO 01"
+    />
+    <Button
+        android:layout_toRightOf="@id/btn01"
+        android:id="@+id/btn02"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BOTAO 02"/>
+    <Button
+        android:id="@+id/btn03"
+        android:layout_toRightOf="@id/btn01"
+        android:layout_below="@id/btn02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BOTAO 03"/>
+    <Button
+        android:layout_toLeftOf="@id/btn03"
+        android:layout_below="@id/btn03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BOTAO 04"/>
+
+</RelativeLayout>
