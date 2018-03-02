@@ -1,7 +1,16 @@
 <resources>
-    <string name="app_name">CauculoIMC</string>
+    <string name="app_name">Cáuculo IMC</string>
     <string name="peso">Peso</string>
     <string name="altura">Altura</string>
     <string name="calcular">Calcular</string>
     <string name="msg">Resultado</string>
+
+    <string name="menor16">Magreza grave</string>
+    <string name="menor17">Magreza moderada</string>
+    <string name="menor185">Magreza leve</string>
+    <string name="menor25">Saudável</string>
+    <string name="menor30">Sobrepeso</string>
+    <string name="menor35">Obesidade Grau I</string>
+    <string name="menor40">Obesidade Grau II (severa)</string>
+    <string name="maior40">Obesidade Grau III (mórbida)</string>
 </resources>
