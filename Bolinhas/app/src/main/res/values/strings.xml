@@ -3,4 +3,14 @@
     <string name="titulo">Título</string>
     <string name="subtitulo">Subtítulo</string>
     <string name="botao">Botão</string>
+
+    <string name="texto">
+        \nLorem ipsum pretium porttitor nibh congue luctus cubilia magna etiam lacinia integer, placerat vitae quis fames sollicitudin
+        est turpis ullamcorper tortor aliquam. sollicitudin iaculis mattis lobortis ut rhoncus laoreet convallis
+        \n\ndonec per mauris, imperdiet vivamus rutrum risus mollis aliquet senectus cras taciti a, sagittis rhoncus cras in pulvinar ornare volutpat ornare quis. ultrices semper amet ac non placerat porttitor nostra suspendisse lorem tristique ut morbi, in facilisis curabitur iaculis lobortis consequat auctor lorem taciti sodales justo. tempus ultricies hac libero tristique massa vestibulum habitasse nostra rutrum,
+        torquent hendrerit quisque elit at erat eu arcu, neque orci blandit nunc condimentum porta eleifend sapien.
+	    \n\nLacus etiam nibh quisque purus fames lacus, nostra aptent est sem semper pharetra, conubia Lacus etiam nibh quisque purus fames lacus, nostra aptent est sem semper pharetra, conubia Lacus etiam nibh quisque purus fames lacus, nostra aptent est sem semper pharetra, conubia
+        Lacus etiam nibh quisque purus fames lacus, nostra aptent est sem semper pharetra, conubia Lacus etiam nibh quisque purus fames lacus, nostra aptent est sem semper pharetra, conubia
+
+    </string>
 </resources>
