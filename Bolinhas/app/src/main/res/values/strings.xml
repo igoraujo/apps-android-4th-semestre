@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Bolinhas</string>
+    <string name="titulo">Título</string>
+    <string name="subtitulo">Subtítulo</string>
 </resources>
