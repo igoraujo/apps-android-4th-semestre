@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">zeplin</string>
+
+    <string name="text_material_design">Material Design\nUI Kit Freebie</string>
+    <string name="text_texto_maior">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
+
+    <string name="button_sign_up">SIGN UP</string>
+    <string name="button_log_in">LOG IN</string>
+
 </resources>
