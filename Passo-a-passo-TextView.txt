@@ -1,0 +1,6 @@
+-Adiciona o ListView no layout
+-Cria o xml do item
+-Relacionar listVie na Activity
+-Implementar Adapter
+-Carregar os itens da lista
+-Setar o adapter na lista
