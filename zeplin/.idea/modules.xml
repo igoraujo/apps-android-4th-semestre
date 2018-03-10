@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Igor\Android\apps-android-4th-semestre\zeplin\app\app.iml" filepath="C:\Igor\Android\apps-android-4th-semestre\zeplin\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/zeplin.iml" filepath="$PROJECT_DIR$/zeplin.iml" />
+      <module fileurl="file://C:\Igor\Android\apps-android-4th-semestre\zeplin\zeplin.iml" filepath="C:\Igor\Android\apps-android-4th-semestre\zeplin\zeplin.iml" />
     </modules>
   </component>
 </project>
