@@ -1,0 +1,7 @@
+-Criar a lista manual
+-Criar layout do item
+-Implementar Adapter
+-Setar Adapter _a lista (ListView)
+-@OnIntentClick(R.id.list)
+-Criando nova Activity
+-Intent
