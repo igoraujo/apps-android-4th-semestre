@@ -32,7 +32,7 @@ public class EstadoAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return estados.get(position);
     }
 
     @Override
@@ -57,4 +57,5 @@ public class EstadoAdapter extends BaseAdapter {
 
         return view;
     }
+
 }

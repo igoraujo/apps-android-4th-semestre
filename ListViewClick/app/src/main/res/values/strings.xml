@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">ListViewClick</string>
+    <string name="app_name">Lista de Estados</string>
+    <string name="selecioneEstado">Selecione o Estado</string>
+    <string name="cidadeSelecionada">Cidades do Estado Selecionado</string>
 </resources>

@@ -1,9 +1,14 @@
 package com.igor.listviewclick;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.igor.listviewclick.Adapter.CidadeAdapter;
 import com.igor.listviewclick.Adapter.EstadoAdapter;
 
 import java.util.ArrayList;
@@ -16,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.lista)
     ListView lista;
-    ListView listaCidade;
 
     List<String> estados;
 
@@ -29,39 +33,49 @@ public class MainActivity extends AppCompatActivity {
 
         estados = new ArrayList<>();
 
-        estados.add(1,"AC");
-        estados.add(2,"AL");
-        estados.add(3,"AM");
-        estados.add(4,"AP");
-        estados.add(5,"BA");
-        estados.add(6,"CE");
-        estados.add(27,"DF");
-        estados.add(7,"ES");
-        estados.add(8,"GO");
-        estados.add(9,"MA");
-        estados.add(10,"MG");
-        estados.add(11,"MS");
-        estados.add(12,"MT");
-        estados.add(13,"PA");
-        estados.add(14,"PB");
-        estados.add(15,"PE");
-        estados.add(16,"PI");
-        estados.add(17,"PR");
-        estados.add(18,"RJ");
-        estados.add(19,"RN");
-        estados.add(20,"RO");
-        estados.add(21,"RR");
-        estados.add(22,"RS");
-        estados.add(23,"SC");
-        estados.add(24,"SE");
-        estados.add(25,"SP");
-        estados.add(26,"TO");
+        estados.add("AC");
+        estados.add("AL");
+        estados.add("AM");
+        estados.add("AP");
+        estados.add("BA");
+        estados.add("CE");
+        estados.add("DF");
+        estados.add("ES");
+        estados.add("GO");
+        estados.add("MA");
+        estados.add("MG");
+        estados.add("MS");
+        estados.add("MT");
+        estados.add("PA");
+        estados.add("PB");
+        estados.add("PE");
+        estados.add("PI");
+        estados.add("PR");
+        estados.add("RJ");
+        estados.add("RN");
+        estados.add("RO");
+        estados.add("RR");
+        estados.add("RS");
+        estados.add("SC");
+        estados.add("SE");
+        estados.add("SP");
+        estados.add("TO");
 
         EstadoAdapter estadoAdapter = new EstadoAdapter(this, estados);
         lista.setAdapter(estadoAdapter);
 
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {
 
+                Intent intent = new Intent(MainActivity.this, CidadesActivity.class);
 
+                intent.putExtra("uf", position);
+
+                startActivity(intent);
+            }
+        });
 
     }
+
 }
