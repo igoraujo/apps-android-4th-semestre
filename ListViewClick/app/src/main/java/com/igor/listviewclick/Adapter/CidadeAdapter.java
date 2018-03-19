@@ -32,7 +32,7 @@ public class CidadeAdapter  extends BaseAdapter{
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return cidades.get(position);
     }
 
     @Override
@@ -42,15 +42,16 @@ public class CidadeAdapter  extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
         String cidade = cidades.get(position);
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View view = inflater.inflate(R.layout.item_estado, null);
+        View view = inflater.inflate(R.layout.item_cidade, null);
 
-        TextView nome = view.findViewById(R.id.nome);
+        TextView nomeCidade = view.findViewById(R.id.nomeCidade);
 
-        nome.setText(cidade);
+        nomeCidade.setText(cidade);
 
         return view;
     }

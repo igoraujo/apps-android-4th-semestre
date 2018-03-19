@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayoutConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.igor.listviewclick.CidadesActivity">
+    tools:context="com.igor.listviewclick.CidadeActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -12,8 +12,8 @@
         android:text="@string/cidadeSelecionada" />
 
     <ListView
-        android:id="@+id/lista"
+        android:id="@+id/listaCidade"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></ListView>
 
-</LinearLayoutConstraintLayout>
+</RelativeLayout>
