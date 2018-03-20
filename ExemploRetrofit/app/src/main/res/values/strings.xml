@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ExemploRetrofit</string>
+    <string name="URL_PRODUTO">http://apiteste.fourtime.com/api/produto/</string>
+</resources>
