@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Insta Fake</string>
+    <string name="URI_API">http://apiteste.fourtime.com/api/feed/obter</string>
 </resources>

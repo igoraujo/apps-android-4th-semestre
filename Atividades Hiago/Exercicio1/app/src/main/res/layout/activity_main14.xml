@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/text1"
+        android:text="Título"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ullamcorper tempus congue. Nullam ut felis diam. Fusce iaculis dignissim euismod. Suspendisse sem erat, finibus eu viverra pharetra, condimentum sit amet quam.
+     Ut mollis rhoncus condimentum. Duis eros neque, tincidunt quis mauris non, finibus dapibus massa. Vestibulum iaculis eros eget pharetra hendrerit.
+     Ut sed scelerisque ex. Vestibulum diam enim, dictum eu elit quis, fringilla posuere ligula. Donec erat erat, consequat vel libero nec, pulvinar dignissim sapien.
+     Suspendisse semper rutrum semper. Integer at facilisis nunc. Ut vitae consequat mi, sed ornare turpis. Mauris vitae enim eget diam maximus vulputate vitae vel elit.
+     Curabitur semper eu magna sit amet efficitur. Duis tincidunt non nisi vel sollicitudin. Pellentesque at augue elit. Integer hendrerit dui mauris, id eleifend mi dictum id. Curabitur interdum quam eros, sit amet semper augue elementum eu. Cras arcu enim, tincidunt imperdiet pretium eget, sagittis vel nulla. Nam dui justo, suscipit ac felis at, ullamcorper mollis ex. Donec eu luctus arcu.
+t    sed scelerisque ex. Vestibulum diam enim, dictum eu elit quis, fringilla posuere ligula. Donec erat erat, consequat vel libero nec, pulvinar dignissim sapien. Suspendisse semper "
+        android:id="@id/text2"
+        android:layout_below="@id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/text1"
+        android:layout_alignParentEnd="true"
+        android:id="@id/botao"
+        android:text="Botão"
+        android:layout_marginLeft="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp" />
+   <!-- <Button
+
+        android:text="Botão"
+        android:id="@+id/botao"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+-->
+</RelativeLayout>
