@@ -1,4 +1,4 @@
-package com.faculdadecotemig.produto;
+package com.example.igor.produto;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.faculdadecotemig.produto", appContext.getPackageName());
+        assertEquals("com.example.igor.produto", appContext.getPackageName());
     }
 }

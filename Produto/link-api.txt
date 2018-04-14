@@ -1,1 +1,0 @@
-http://apiteste.fourtime.com/api/produto/lista

@@ -1,7 +1,7 @@
-package com.faculdadecotemig.produto.models;
+package com.example.igor.produto.models;
 
 /**
- * Created by 71600388 on 13/04/2018.
+ * Created by Igor on 14/04/2018.
  */
 
 public class ModelProduto {
@@ -33,4 +33,9 @@ public class ModelProduto {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+
+
+
+
 }

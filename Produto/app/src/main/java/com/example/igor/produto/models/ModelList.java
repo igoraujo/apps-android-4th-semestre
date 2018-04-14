@@ -1,17 +1,17 @@
-package com.faculdadecotemig.produto.models;
+package com.example.igor.produto.models;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
 /**
- * Created by 71600388 on 13/04/2018.
+ * Created by Igor on 14/04/2018.
  */
 
-public class ModelProdutoList {
+public class ModelList {
 
     private List<ModelProduto> list;
-    private  boolean success;
+    private boolean success;
 
     public List<ModelProduto> getList() {
         return list;

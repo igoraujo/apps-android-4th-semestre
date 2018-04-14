@@ -1,4 +1,4 @@
-package com.faculdadecotemig.produto.ui.adapters;
+package com.example.igor.produto.ui.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,13 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.faculdadecotemig.produto.R;
-import com.faculdadecotemig.produto.models.ModelProduto;
-
 import java.util.List;
+import com.example.igor.produto.R;
+import com.example.igor.produto.models.ModelProduto;
 
 /**
- * Created by 71600388 on 13/04/2018.
+ * Created by Igor on 14/04/2018.
  */
 
 public class AdapterProduto extends BaseAdapter {
@@ -23,7 +22,7 @@ public class AdapterProduto extends BaseAdapter {
     private List<ModelProduto> list;
     private Context context;
 
-    public AdapterProduto(List<ModelProduto> list, Context context) {
+    public AdapterProduto(List<ModelProduto> list, Context context){
         this.list = list;
         this.context = context;
     }
@@ -46,23 +45,22 @@ public class AdapterProduto extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        ModelProduto post = list.get(position);
+        ModelProduto produto = list.get(position);
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View view = inflater.inflate(R.layout.produto, null);
+        View view = inflater.inflate(R.layout.item_produto, null);
 
         ImageView imagem = view.findViewById(R.id.imagem);
-        Glide.with(context).load(post.getImagem()).into(imagem);
+        Glide.with(context).load(produto.getImagem()).into(imagem);
 
         TextView valor = view.findViewById(R.id.valor);
-        valor.setText(post.getValor());
+        valor.setText(produto.getValor());
 
         TextView nome = view.findViewById(R.id.nome);
-        nome.setText(post.getNome());
+        nome.setText(produto.getNome());
 
         return view;
-
 
     }
 }

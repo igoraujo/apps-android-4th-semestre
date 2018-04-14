@@ -1,4 +1,4 @@
-package com.faculdadecotemig.produto;
+package com.example.igor.produto;
 
 import org.junit.Test;
 

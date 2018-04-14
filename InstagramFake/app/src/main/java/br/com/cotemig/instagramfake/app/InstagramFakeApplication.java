@@ -2,8 +2,8 @@ package br.com.cotemig.instagramfake.app;
 
 import android.app.Application;
 
-import br.com.cotemig.instagramfake.services.RestService;
 import br.com.cotemig.instagramfake.services.ServiceFeed;
+import br.com.cotemig.instagramfake.services.RestService;
 
 /**
  * Created by dirceu on 06/04/2018.
