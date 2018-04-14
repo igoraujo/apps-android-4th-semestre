@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    
+
     <ImageView
         android:scaleType="fitXY"
         android:id="@+id/imagem"
@@ -14,7 +14,7 @@
     <TextView
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:id="@+id/descricao"
+        android:id="@+id/valor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Descricao"/>
@@ -22,27 +22,9 @@
     <TextView
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:id="@+id/data"
+        android:id="@+id/nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="12/12/2012"/>
-
-    <TextView
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:id="@+id/likes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="38 likes"/>
-
-    <TextView
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:id="@+id/usuarios"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="jose, joao"/>
-
-
 
 </LinearLayout>

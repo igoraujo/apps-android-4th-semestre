@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Produto</string>
+    <string name="URL_API_PRODUTO">http://apiteste.fourtime.com/api/produto/lista</string>
+</resources>

@@ -10,6 +10,7 @@ import br.com.cotemig.instagramfake.app.InstagramFakeApplication;
 import br.com.cotemig.instagramfake.model.ModelList;
 import br.com.cotemig.instagramfake.services.ServiceFeed;
 import br.com.cotemig.instagramfake.ui.adapters.AdapterFeed;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import retrofit2.Call;
