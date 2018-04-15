@@ -10,15 +10,15 @@ import java.util.List;
 
 public class ModelList {
 
-    private List<ModelProduto> list;
+    private List<ModelProduto> lista;
     private boolean success;
 
     public List<ModelProduto> getList() {
-        return list;
+        return lista;
     }
 
-    public void setList(List<ModelProduto> list) {
-        this.list = list;
+    public void setLista(List<ModelProduto> lista) {
+        this.lista = lista;
     }
 
     public boolean isSuccess() {
