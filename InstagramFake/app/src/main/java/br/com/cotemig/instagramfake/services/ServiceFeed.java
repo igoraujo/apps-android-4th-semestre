@@ -5,7 +5,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 /**
- * Created by dirceu on 06/04/2018.
+ * Created by 71600388 on 26/03/2018.
  */
 
 public interface ServiceFeed {

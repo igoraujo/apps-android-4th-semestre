@@ -3,22 +3,24 @@ package com.igor.instafake.ui.activities;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import com.igor.instafake.R;
-import com.igor.instafake.app.adapter.ItemAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.igor.instafake.app.InstaFakeApplication;
+import com.igor.instafake.model.ModelList;
+import com.igor.instafake.service.IServiceFeed;
+import com.igor.instafake.ui.adapters.AdapterFeed;
 
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.lista)
     ListView lista;
-
-    List<String> itens;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +29,29 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        itens = new ArrayList<String>();
+        getFeed();
+    }
 
-        itens.add("teste01");
-        itens.add("teste02");
+    private void getFeed(){
+        IServiceFeed s = InstaFakeApplication.getInstance().getServiceFeed();
+        Call<ModelList> call = s.obter();
 
-        ItemAdapter adapter = new ItemAdapter(this, itens);
-        lista.setAdapter(adapter);
+        call.enqueue(new Callback<ModelList>() {
+            @Override
+            public void onResponse(Call<ModelList> call, Response<ModelList> response) {
+                if(response.code() == 200){
+//                    Toast.makeText(MainActivity.this, "Quantidade: " + response.body().getLista().size(), Toast.LENGTH_LONG).show();
 
+                    AdapterFeed adapter = new AdapterFeed(response.body().getLista(), MainActivity.this);
+                    lista.setAdapter(adapter);
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ModelList> call, Throwable t) {
+                Toast.makeText(MainActivity.this, "Ops!!!", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }

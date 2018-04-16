@@ -17,7 +17,7 @@ import br.com.cotemig.instagramfake.model.ModelPost;
 import br.com.cotemig.instagramfake.model.ModelUsuario;
 
 /**
- * Created by dirceu on 06/04/2018.
+ * Created by 71600388 on 26/03/2018.
  */
 
 public class AdapterFeed extends BaseAdapter {

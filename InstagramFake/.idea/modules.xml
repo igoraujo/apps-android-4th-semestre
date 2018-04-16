@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/InstagramFake.iml" filepath="$PROJECT_DIR$/InstagramFake.iml" />
+      <module fileurl="file://C:\Igor\Android\apps-android-4th-semestre\InstagramFake\InstagramFake.iml" filepath="C:\Igor\Android\apps-android-4th-semestre\InstagramFake\InstagramFake.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Igor\Android\apps-android-4th-semestre\InstagramFake\app\app.iml" filepath="C:\Igor\Android\apps-android-4th-semestre\InstagramFake\app\app.iml" />
     </modules>
   </component>
 </project>

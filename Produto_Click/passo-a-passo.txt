@@ -1,0 +1,83 @@
+.adicionar extensones do gradle
+
+--------------------------------
+
+Module:
+app>
+    
+compile 'com.squareup.retrofit2:retrofit:2.4.0'
+    
+compile 'com.squareup.retrofit2:converter-gson:2.4.0'
+
+    
+compile 'com.jakewharton:butterknife:8.8.1'
+    
+annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    
+implementation 'com.github.bumptech.glide:glide:4.0.0'
+    
+annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+
+Project:Produto>
+	  
+mavenCentral()
+
+
+
+.fazer as Models
+
+-----------------
+
+ModelItem (Produto)
+
+ModelItemList (ProdutoList)
+
+
+.Services
+---------
+RestService
+ServiceItem (ServiceProduto)
+
+
+.app
+----
+ItemApplication (ProdutoApplication)
+
+
+
+.Item.xml (produto.xml)
+
+-----------------------
+
+item_produto (produto.xml)
+
+
+
+.adapter
+
+--------
+
+AdapterItem (AdapterProduto)
+
+
+
+.MainActivity
+
+-------------
+
+MainActivty
+
+
+
+Produtoaplication:
+	url alterada (so alterei pq uso dessa, a sua tem nexo e tal, so que eu ja tentei dessa forma e nao deu certo).
+
+Serviceproduto:
+	url: alterada (msm de cima).
+adapterproduto:
+	glide (nao chama context e sim o nome, no caso vc tinha dado de imagem.)
+
+modellist:
+	list alterado para lista (json retorna uma lista e nao list, tem que estar escrito da msm forma(por isso a lista vinha null))
+	success (msm de cima).

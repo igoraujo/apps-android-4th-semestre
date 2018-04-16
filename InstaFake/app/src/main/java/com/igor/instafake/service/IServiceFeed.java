@@ -1,6 +1,6 @@
 package com.igor.instafake.service;
 
-import com.igor.instafake.model.ModelListFeed;
+import com.igor.instafake.model.ModelList;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -11,5 +11,5 @@ import retrofit2.http.GET;
 
 public interface IServiceFeed {
     @GET("feed/obter/")
-    Call<ModelListFeed> getModelFeed();
+    Call<ModelList> obter();
 }
