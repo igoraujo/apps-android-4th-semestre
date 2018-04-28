@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FindTruck</string>
+
+    <string name="user">Usuário</string>
+    <string name="password">Senha</string>
+    <string name="login">Entrar</string>
+    <string name="forgot">Esqueci minha senha</string>
+    <string name="register">Cadastro</string>
+</resources>
