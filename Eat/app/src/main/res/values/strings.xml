@@ -1,9 +1,18 @@
 <resources>
-    <string name="app_name">Eat</string>
+    <string name="app_name">EAT</string>
 
     <string name="user">Usuário</string>
     <string name="password">Senha</string>
+    <string name="name">Nome</string>
+    <string name="lastname">Sobrenome</string>
+    <string name="birthdate">Data de Nascimento</string>
+
     <string name="login">Entrar</string>
-    <string name="forgot">Esqueci minha senha</string>
-    <string name="register">Cadastro</string>
+    <string name="forgot">Esqueci Minha Senha</string>
+    <string name="register">Cadastrar</string>
+    <string name="email">E-mail</string>
+    <string name="recover">Recuperar Senha</string>
+    <string name="toback">Voltar</string>
+    <string name="recoverText">Digite o endereço de e-mail de recuperação de senha.</string>
+
 </resources>

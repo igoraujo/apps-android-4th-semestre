@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FindTruck.iml" filepath="$PROJECT_DIR$/FindTruck.iml" />
+      <module fileurl="file://C:\Users\Igor\source\android\apps-android-4th-semestre\FindTruck\FindTruck.iml" filepath="C:\Users\Igor\source\android\apps-android-4th-semestre\FindTruck\FindTruck.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Igor\source\android\apps-android-4th-semestre\FindTruck\app\app.iml" filepath="C:\Users\Igor\source\android\apps-android-4th-semestre\FindTruck\app\app.iml" />
     </modules>
   </component>
 </project>

@@ -9,11 +9,11 @@ import br.com.cotemig.eat.services.RestService;
  * Created by 71600388 on 27/04/2018.
  */
 
-public class EatApplicarion extends Application {
+public class EatApplication extends Application {
 
-    private static final String URL = "http://private-d37d8-findtruck.apiary-mock.com/";
+    private static final String URL = "http://private-635c6d-eat3.apiary-mock.com/";
 
-    private static EatApplicarion instance;
+    private static EatApplication instance;
 
     private IServiceUser serviceUser;
 
@@ -28,7 +28,7 @@ public class EatApplicarion extends Application {
         serviceUser = (new RestService(URL)).getService(IServiceUser.class);
     }
 
-    public static EatApplicarion getInstance() {
+    public static EatApplication getInstance() {
         return instance;
     }
 

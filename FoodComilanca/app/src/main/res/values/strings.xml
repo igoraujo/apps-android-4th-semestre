@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">FoodComillanca</string>
+
+
+    <string name="food">FoodComillança</string>
+    <string name="usuario">Usuário</string>
+    <string name="password">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="esqueci">Esqueci minha senha</string>
+    <string name="cadastro">Cadastre-se</string>
+
+    <string name="digiteEmail">Digite Seu Email</string>
+    <string name="novaSenha">Nova Senha</string>
+
+    <string name="novaConta">Nova Conta</string>
+    <string name="nome">Nome</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="cadastrar">Cadastrar</string>
+
+
+</resources>
