@@ -74,6 +74,7 @@ public class RegisterActivity extends AppCompatActivity {
     public void backClick() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
 }

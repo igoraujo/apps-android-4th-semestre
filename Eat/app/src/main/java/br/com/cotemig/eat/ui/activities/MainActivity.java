@@ -42,12 +42,14 @@ public class MainActivity extends AppCompatActivity {
     public void forgotClick() {
         Intent intent = new Intent(this, ForgotActivity.class);
         startActivity(intent);
+        finish();
     }
 
     @OnClick(R.id.register)
     public void registerClick() {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
+        finish();
     }
 
     private void auth() {
