@@ -11,7 +11,7 @@ import br.com.cotemig.eat.services.RestService;
 
 public class EatApplication extends Application {
 
-    private static final String URL = "http://private-635c6d-eat3.apiary-mock.com/";
+    private static final String URL = "http://api.foodtruck.fourtime.com/";
 
     private static EatApplication instance;
 

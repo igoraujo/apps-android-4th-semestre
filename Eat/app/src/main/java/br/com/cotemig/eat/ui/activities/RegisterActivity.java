@@ -58,7 +58,7 @@ public class RegisterActivity extends AppCompatActivity {
         call.enqueue(new Callback<ModelUser>() {
             @Override
             public void onResponse(Call<ModelUser> call, Response<ModelUser> response) {
-                if (response.code() == 201) {
+                if (response.code() == 204) {
                     Toast.makeText(RegisterActivity.this, "Usuário cadastrado com sucesso!!!", Toast.LENGTH_SHORT).show();
                 }
             }

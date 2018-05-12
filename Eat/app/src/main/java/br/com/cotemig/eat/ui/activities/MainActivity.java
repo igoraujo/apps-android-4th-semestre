@@ -67,16 +67,11 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<ModelUser> call, Response<ModelUser> response) {
 
                 if (response.code() == 200) {
-                    if (response.body().getUser().toString().equals(user.getText().toString()) && response.body().getPassword().toString().equals(password.getText().toString())) {
-                        Toast.makeText(MainActivity.this, "Entrou", Toast.LENGTH_SHORT).show();
-                    }
-                    else {
-                        Toast.makeText(MainActivity.this, "Login ou senha incorreto.", Toast.LENGTH_SHORT).show();
-                    }
-
+                    Toast.makeText(MainActivity.this, "Entrou", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(MainActivity.this, "Ops! Algo de errado aconteceu. HTTPResponse: " + response.code(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Login ou senha incorreto.", Toast.LENGTH_SHORT).show();
                 }
+
             }
 
             @Override
