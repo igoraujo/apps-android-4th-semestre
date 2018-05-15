@@ -15,4 +15,8 @@
     <string name="toback">Voltar</string>
     <string name="recoverText">Digite o endereço de e-mail de recuperação de senha.</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.cotemig.eat">
+    package="br.com.cotemig.eat" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,14 +11,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".ui.activities.MainActivity"
             android:label="Login"
-            android:screenOrientation="portrait">
-
+            android:screenOrientation="portrait" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -27,9 +26,22 @@
             android:name=".ui.activities.ForgotActivity"
             android:label="Recuperar Senha"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.activities.RegisterActivity"
-            android:screenOrientation="portrait"
-            android:label="Cadastrar"></activity>
+        <activity
+            android:name=".ui.activities.RegisterActivity"
+            android:label="Cadastrar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.SplashScreenActivity"
+            android:label="@string/title_activity_splash_screen"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>
