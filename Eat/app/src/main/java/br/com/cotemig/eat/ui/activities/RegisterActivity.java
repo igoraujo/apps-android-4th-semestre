@@ -72,7 +72,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     @OnClick(R.id.btnBack)
     public void backClick() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
     }

@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ExemploRetrofit-Dirceu.iml" filepath="$PROJECT_DIR$/ExemploRetrofit-Dirceu.iml" />
+      <module fileurl="file://H:\4th-periodo\apps-android-4th-semestre\ExemploRetrofit-Dirceu\ExemploRetrofit-Dirceu.iml" filepath="H:\4th-periodo\apps-android-4th-semestre\ExemploRetrofit-Dirceu\ExemploRetrofit-Dirceu.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://H:\4th-periodo\apps-android-4th-semestre\ExemploRetrofit-Dirceu\app\app.iml" filepath="H:\4th-periodo\apps-android-4th-semestre\ExemploRetrofit-Dirceu\app\app.iml" />
     </modules>
   </component>
 </project>

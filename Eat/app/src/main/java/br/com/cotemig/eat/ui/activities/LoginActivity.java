@@ -17,7 +17,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @BindView(R.id.user)
     EditText user;
@@ -61,22 +61,21 @@ public class MainActivity extends AppCompatActivity {
 
         Call<ModelUser> call = s.auth(modelUser);
 
-
         call.enqueue(new Callback<ModelUser>() {
             @Override
             public void onResponse(Call<ModelUser> call, Response<ModelUser> response) {
 
                 if (response.code() == 200) {
-                    Toast.makeText(MainActivity.this, "Entrou", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Entrou", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(MainActivity.this, "Login ou senha incorreto.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Login ou senha incorreto.", Toast.LENGTH_SHORT).show();
                 }
 
             }
 
             @Override
             public void onFailure(Call<ModelUser> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "Falhaaa!!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Falhaaa!!!", Toast.LENGTH_SHORT).show();
             }
         });
 
