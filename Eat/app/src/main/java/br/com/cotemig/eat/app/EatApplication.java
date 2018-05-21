@@ -2,6 +2,7 @@ package br.com.cotemig.eat.app;
 
 import android.app.Application;
 
+import br.com.cotemig.eat.services.IServiceHome;
 import br.com.cotemig.eat.services.IServiceUser;
 import br.com.cotemig.eat.services.RestService;
 
@@ -16,6 +17,7 @@ public class EatApplication extends Application {
     private static EatApplication instance;
 
     private IServiceUser serviceUser;
+    private IServiceHome serviceHome;
 
     @Override
     public void onCreate() {
@@ -26,6 +28,7 @@ public class EatApplication extends Application {
 
     private void createServices(){
         serviceUser = (new RestService(URL)).getService(IServiceUser.class);
+        serviceHome = (new RestService(URL)).getService(IServiceHome.class);
     }
 
     public static EatApplication getInstance() {
@@ -34,6 +37,10 @@ public class EatApplication extends Application {
 
     public IServiceUser getServiceUser() {
         return serviceUser;
+    }
+
+    public IServiceHome getServiceHome() {
+        return serviceHome;
     }
 
 }
