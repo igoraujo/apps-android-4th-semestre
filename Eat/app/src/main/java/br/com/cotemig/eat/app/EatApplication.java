@@ -12,7 +12,7 @@ import br.com.cotemig.eat.services.RestService;
 
 public class EatApplication extends Application {
 
-    private static final String URL = "http://api.foodtruck.fourtime.com/";
+    private static final String URL = "http://api.foodtruck.fourtime.com/foodtruck/";
 
     private static EatApplication instance;
 
