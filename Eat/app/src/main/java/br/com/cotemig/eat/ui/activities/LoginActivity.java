@@ -65,11 +65,15 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ModelUser> call, Response<ModelUser> response) {
 
-                if (response.code() == 200) {
-                    Toast.makeText(LoginActivity.this, "Entrou", Toast.LENGTH_SHORT).show();
-                } else {
+//                if (response.code() == 200) {
+                    Toast.makeText(LoginActivity.this, "Seja Bem Vindo", Toast.LENGTH_SHORT).show();
+
+                    Intent i = new Intent(LoginActivity.this, HomeActivity.class);
+                    startActivity(i);
+
+//                } else {
                     Toast.makeText(LoginActivity.this, "Login ou senha incorreto.", Toast.LENGTH_SHORT).show();
-                }
+//                }
 
             }
 

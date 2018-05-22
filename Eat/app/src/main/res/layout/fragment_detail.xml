@@ -4,6 +4,11 @@
     android:layout_height="match_parent"
     tools:context="br.com.cotemig.eat.ui.fragments.DetailFragment">
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Detalhes"/>
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"

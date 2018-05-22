@@ -44,6 +44,10 @@ public class AdapterDetail extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        return null;
+
+        //inplement view
+
+        //layout inflater
+        return convertView;
     }
 }

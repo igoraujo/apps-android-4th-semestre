@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.List;
+
 import br.com.cotemig.eat.R;
 import br.com.cotemig.eat.app.EatApplication;
 import br.com.cotemig.eat.models.ModelDateail;
@@ -48,24 +50,18 @@ public class DetailFragment extends Fragment {
 
     private void getDetaril() {
         IServiceHome s = EatApplication.getInstance().getServiceHome();
-        Call<ModelDateail> call = s.lista();
+        Call<List<ModelDateail>> call = s.lista("briga");
 
-        call.enqueue(new Callback<ModelDateail>() {
+        call.enqueue(new Callback<List<ModelDateail>>() {
             @Override
-            public void onResponse(Call<ModelDateail> call, Response<ModelDateail> response) {
-                if(response.code() == 200){
+            public void onResponse(Call<List<ModelDateail>> call, Response<List<ModelDateail>> response) {
 
-                    AdapterDetail adapter = new AdapterDetail(response.body().getDetail(), DetailFragment.this);
-                    list.setAdapter(adapter);
-                }
             }
 
             @Override
-            public void onFailure(Call<ModelDateail> call, Throwable t) {
+            public void onFailure(Call<List<ModelDateail>> call, Throwable t) {
 
             }
-
-
         });
     }
 
