@@ -43,7 +43,7 @@ public class AdapterDetail extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent                                                                                                                                                                                                                                                  ) {
 
         //inplement view
 

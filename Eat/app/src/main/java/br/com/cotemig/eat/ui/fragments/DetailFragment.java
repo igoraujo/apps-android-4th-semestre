@@ -28,6 +28,8 @@ public class DetailFragment extends Fragment {
     @BindView(R.id.list)
     ListView list;
 
+    List<ModelDateail> listEat;
+
     public static DetailFragment newInstance() {
         DetailFragment fragment = new DetailFragment();
         return fragment;
@@ -36,10 +38,8 @@ public class DetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        // return inflater.inflate(R.layout.fragment_detail, container, false);
 
-        getDetaril();
+        getDetail();
 
         View view = inflater.inflate(R.layout.fragment_detail, container, false);
 
@@ -48,14 +48,16 @@ public class DetailFragment extends Fragment {
         return view;
     }
 
-    private void getDetaril() {
+    private void getDetail() {
         IServiceHome s = EatApplication.getInstance().getServiceHome();
         Call<List<ModelDateail>> call = s.lista("briga");
 
         call.enqueue(new Callback<List<ModelDateail>>() {
             @Override
             public void onResponse(Call<List<ModelDateail>> call, Response<List<ModelDateail>> response) {
-
+                if (response.code() == 200) {
+                    listEat = response.body();
+                }
             }
 
             @Override
