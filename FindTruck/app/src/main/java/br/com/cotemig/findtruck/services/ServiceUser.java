@@ -12,18 +12,16 @@ import retrofit2.http.POST;
 
 public interface ServiceUser {
 
-    @POST("auth")
+    @POST("user/auth")
     Call<ModelUser> auth(@Body ModelUser user);
 
-    // TODO: implementar método register no apiary
-    @POST("register")
+    @POST("user")
     Call<ModelUser> register(@Body ModelUser user);
 
-    // TODO: implementar método forgot no apiary
-    @POST("forgot")
+    @POST("user/forgot")
     Call<ModelUser> forgot(@Body ModelUser user);
 
-    @GET("me")
+    @GET("user/me")
     Call<ModelUser> me();
 
 }

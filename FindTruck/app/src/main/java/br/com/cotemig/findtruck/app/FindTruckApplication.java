@@ -4,6 +4,7 @@ import android.app.Application;
 
 import br.com.cotemig.findtruck.services.RestService;
 import br.com.cotemig.findtruck.services.ServiceUser;
+import br.com.cotemig.findtruck.services.ServicesFoodTruck;
 
 /**
  * Created by dirceu on 23/04/2018.
@@ -11,11 +12,12 @@ import br.com.cotemig.findtruck.services.ServiceUser;
 
 public class FindTruckApplication extends Application {
 
-    private static final String URL = "http://private-d37d8-findtruck.apiary-mock.com/";
+    private static final String URL = "http://api.foodtruck.fourtime.com/";
 
     private static FindTruckApplication instance;
 
     private ServiceUser serviceUser;
+    private ServicesFoodTruck servicesFoodTruck;
 
     @Override
     public void onCreate() {
@@ -26,6 +28,7 @@ public class FindTruckApplication extends Application {
 
     private void createServices(){
         serviceUser = (new RestService(URL)).getService(ServiceUser.class);
+        servicesFoodTruck = (new RestService(URL)).getService(ServicesFoodTruck.class);
     }
 
     public static FindTruckApplication getInstance() {
@@ -34,5 +37,9 @@ public class FindTruckApplication extends Application {
 
     public ServiceUser getServiceUser() {
         return serviceUser;
+    }
+
+    public ServicesFoodTruck getServicesFoodTruck() {
+        return servicesFoodTruck;
     }
 }
