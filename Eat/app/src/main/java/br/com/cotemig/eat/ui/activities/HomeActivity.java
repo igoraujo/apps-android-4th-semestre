@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import br.com.cotemig.eat.R;
 import br.com.cotemig.eat.ui.fragments.HomeFragment;
+import butterknife.ButterKnife;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -15,6 +16,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        ButterKnife.bind(this);
         setFragment(HomeFragment.newInstance(this));
     }
 

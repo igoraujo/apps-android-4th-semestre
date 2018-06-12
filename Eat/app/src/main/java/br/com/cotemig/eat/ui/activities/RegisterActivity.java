@@ -63,22 +63,17 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ModelUser> call, Response<ModelUser> response) {
                 if (response.code() == 204) {
-
-
-              Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-              startActivity(intent);
-
-//                    new MaterialDialog.Builder(RegisterActivity.this)
-//                            .title(R.string.ops)
-//                            .content(R.string.success_register)
-//                            .onPositive(new MaterialDialog.SingleButtonCallback() {
-//                                @Override
-//                                public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-//                                    finish();
-//                                }
-//                            })
-//                            .positiveText("Ok")
-//                            .show();
+                    new MaterialDialog.Builder(RegisterActivity.this)
+                            .title(R.string.ops)
+                            .content(R.string.success_register)
+                            .onPositive(new MaterialDialog.SingleButtonCallback() {
+                                @Override
+                                public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                                    finish();
+                                }
+                            })
+                            .positiveText("Ok")
+                            .show();
                 } else {
                     errorMessage();
                 }

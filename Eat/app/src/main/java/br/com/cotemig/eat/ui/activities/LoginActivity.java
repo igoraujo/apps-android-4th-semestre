@@ -1,10 +1,14 @@
 package br.com.cotemig.eat.ui.activities;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
 
 import br.com.cotemig.eat.R;
 import br.com.cotemig.eat.app.EatApplication;
@@ -66,20 +70,38 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<ModelUser> call, Response<ModelUser> response) {
 
                 if (response.code() == 200) {
-                    Toast.makeText(LoginActivity.this, "Seja Bem Vindo", Toast.LENGTH_SHORT).show();
-
-                    Intent i = new Intent(LoginActivity.this, HomeActivity.class);
+                    Intent i = new Intent(getApplicationContext(), HomeActivity.class);
                     startActivity(i);
 
                 } else {
-                    Toast.makeText(LoginActivity.this, "Login ou senha incorreto.", Toast.LENGTH_SHORT).show();
+                    new MaterialDialog.Builder(LoginActivity.this)
+                            .title(R.string.ops)
+                            .content(R.string.success_register)
+                            .onPositive(new MaterialDialog.SingleButtonCallback() {
+                                @Override
+                                public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                                    finish();
+                                }
+                            })
+                            .positiveText("Ok")
+                            .show();
                 }
 
             }
 
             @Override
             public void onFailure(Call<ModelUser> call, Throwable t) {
-                Toast.makeText(LoginActivity.this, "Falhaaa!!!", Toast.LENGTH_SHORT).show();
+                new MaterialDialog.Builder(LoginActivity.this)
+                        .title(R.string.ops)
+                        .content(R.string.generic_register)
+                        .onPositive(new MaterialDialog.SingleButtonCallback() {
+                            @Override
+                            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                                finish();
+                            }
+                        })
+                        .positiveText(R.string.ok)
+                        .show();
             }
         });
 

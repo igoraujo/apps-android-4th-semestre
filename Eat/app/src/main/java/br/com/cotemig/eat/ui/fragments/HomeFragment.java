@@ -38,7 +38,7 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public static HomeFragment newInstance(HomeActivity activity){
+    public static HomeFragment newInstance(HomeActivity activity) {
         HomeFragment f = new HomeFragment();
         f.activity = activity;
         return f;
@@ -58,7 +58,7 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
-    public void getFindTrucks(){
+    public void getFindTrucks() {
 
         IServiceHome s = EatApplication.getInstance().getServiceHome();
         Call<List<ModelDateail>> call = s.lista("");
@@ -79,7 +79,7 @@ public class HomeFragment extends Fragment {
     }
 
     @OnItemClick(R.id.list)
-    public void click(int position){
+    public void click(int position) {
 
         ModelDateail m = modelDateails.get(position);
 
