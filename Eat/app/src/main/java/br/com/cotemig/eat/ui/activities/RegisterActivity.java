@@ -63,19 +63,22 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ModelUser> call, Response<ModelUser> response) {
                 if (response.code() == 204) {
-                    Toast.makeText(RegisterActivity.this, "Usuário cadastrado com sucesso!!!", Toast.LENGTH_SHORT).show();
 
-                    new MaterialDialog.Builder(RegisterActivity.this)
-                            .title(R.string.ops)
-                            .content(R.string.success_register)
-                            .onPositive(new MaterialDialog.SingleButtonCallback() {
-                                @Override
-                                public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                    finish();
-                                }
-                            })
-                            .positiveText("Ok")
-                            .show();
+
+              Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+              startActivity(intent);
+
+//                    new MaterialDialog.Builder(RegisterActivity.this)
+//                            .title(R.string.ops)
+//                            .content(R.string.success_register)
+//                            .onPositive(new MaterialDialog.SingleButtonCallback() {
+//                                @Override
+//                                public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+//                                    finish();
+//                                }
+//                            })
+//                            .positiveText("Ok")
+//                            .show();
                 } else {
                     errorMessage();
                 }
@@ -83,7 +86,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ModelUser> call, Throwable t) {
-                Toast.makeText(RegisterActivity.this, "Falhaaa!!!", Toast.LENGTH_SHORT).show();
+                errorMessage();
             }
         });
     }
