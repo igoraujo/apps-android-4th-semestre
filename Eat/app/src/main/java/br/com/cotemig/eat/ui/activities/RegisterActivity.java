@@ -1,10 +1,14 @@
 package br.com.cotemig.eat.ui.activities;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
 
 import br.com.cotemig.eat.R;
 import br.com.cotemig.eat.app.EatApplication;
@@ -60,6 +64,20 @@ public class RegisterActivity extends AppCompatActivity {
             public void onResponse(Call<ModelUser> call, Response<ModelUser> response) {
                 if (response.code() == 204) {
                     Toast.makeText(RegisterActivity.this, "Usuário cadastrado com sucesso!!!", Toast.LENGTH_SHORT).show();
+
+                    new MaterialDialog.Builder(RegisterActivity.this)
+                            .title(R.string.ops)
+                            .content(R.string.success_register)
+                            .onPositive(new MaterialDialog.SingleButtonCallback() {
+                                @Override
+                                public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                                    finish();
+                                }
+                            })
+                            .positiveText("Ok")
+                            .show();
+                } else {
+                    errorMessage();
                 }
             }
 
@@ -77,4 +95,17 @@ public class RegisterActivity extends AppCompatActivity {
         finish();
     }
 
+    private void errorMessage() {
+        new MaterialDialog.Builder(RegisterActivity.this)
+                .title(R.string.ops)
+                .content(R.string.generic_register)
+                .onPositive(new MaterialDialog.SingleButtonCallback() {
+                    @Override
+                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                        finish();
+                    }
+                })
+                .positiveText(R.string.ok)
+                .show();
+    }
 }
