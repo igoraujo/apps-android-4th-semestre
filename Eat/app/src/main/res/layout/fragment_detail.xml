@@ -4,10 +4,23 @@
     android:layout_height="match_parent"
     tools:context="br.com.cotemig.eat.ui.fragments.DetailFragment">
 
-    <TextView
-        android:layout_margin="15dp"
-        android:id="@+id/nome"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp" />
+
+        <TextView
+            android:id="@+id/detalhe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nome"
+            android:layout_margin="15dp" />
+    </RelativeLayout>
+
 
 </FrameLayout>

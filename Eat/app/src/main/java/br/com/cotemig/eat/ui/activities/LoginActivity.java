@@ -60,10 +60,10 @@ public class LoginActivity extends AppCompatActivity {
         IServiceUser s = EatApplication.getInstance().getServiceUser();
 
         final ModelUser modelUser = new ModelUser();
-//        modelUser.setUser(user.getText().toString());
-//        modelUser.setPassword(password.getText().toString());
-        modelUser.setUser("igor@araujo.work");
-        modelUser.setPassword("senha123456");
+        modelUser.setUser(user.getText().toString());
+        modelUser.setPassword(password.getText().toString());
+//        modelUser.setUser("igor@araujo.work");
+//        modelUser.setPassword("senha123456");
 
         Call<ModelUser> call = s.auth(modelUser);
 
@@ -72,13 +72,24 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<ModelUser> call, Response<ModelUser> response) {
 
                 if (response.code() == 200) {
+
+                    new MaterialDialog.Builder(LoginActivity.this)
+                            .title(R.string.ops)
+                            .content(R.string.error)
+                            .onPositive(new MaterialDialog.SingleButtonCallback() {
+                                @Override
+                                public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                                    finish();
+                                }
+                            }).show();
+
                     Intent i = new Intent(getApplicationContext(), HomeActivity.class);
                     startActivity(i);
 
                 } else {
                     new MaterialDialog.Builder(LoginActivity.this)
                             .title(R.string.ops)
-                            .content(R.string.success_register)
+                            .content(R.string.error)
                             .onPositive(new MaterialDialog.SingleButtonCallback() {
                                 @Override
                                 public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
@@ -95,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onFailure(Call<ModelUser> call, Throwable t) {
                 new MaterialDialog.Builder(LoginActivity.this)
                         .title(R.string.ops)
-                        .content(R.string.generic_register)
+                        .content(R.string.error)
                         .onPositive(new MaterialDialog.SingleButtonCallback() {
                             @Override
                             public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {

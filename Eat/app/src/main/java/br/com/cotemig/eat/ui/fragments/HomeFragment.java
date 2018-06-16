@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.List;
@@ -18,6 +20,7 @@ import br.com.cotemig.eat.ui.activities.HomeActivity;
 import br.com.cotemig.eat.ui.adapters.AdapterDetail;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.OnItemClick;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -28,8 +31,9 @@ import retrofit2.Response;
  */
 public class HomeFragment extends Fragment {
 
-    @BindView(R.id.list)
-    ListView list;
+    @BindView(R.id.list) ListView list;
+
+    @BindView(R.id.txtSearch) EditText txtSearch;
 
     List<ModelDateail> modelDateails;
 
@@ -56,10 +60,16 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
+    @OnClick(R.id.btnSearch)
+    public void btnSearchClick(Button btnSearch){
+        getFindTrucks();
+    }
+
+
     public void getFindTrucks() {
 
         IServiceHome s = EatApplication.getInstance().getServiceHome();
-        Call<List<ModelDateail>> call = s.lista("");
+        Call<List<ModelDateail>> call = s.lista(txtSearch.getText().toString());
 
         call.enqueue(new Callback<List<ModelDateail>>() {
             @Override

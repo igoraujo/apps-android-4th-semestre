@@ -16,13 +16,14 @@
     <string name="recoverText">Digite o endereço de e-mail de recuperação de senha.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
     <string name="title_activity_home">HomeActivity</string>
 
     <string name="ops">Ops</string>
     <string name="success_register">Cadastrado com sucesso</string>
     <string name="generic_register">Não conseguimos criar a sua conta. Tente novamente..</string>
+    <string name="error">Algo deu errado. Tente novamente mais tarde.</string>
     <string name="ok">Ok</string>
+    <string name="success">AêÊÊêê entrou!!!</string>
 
 </resources>
