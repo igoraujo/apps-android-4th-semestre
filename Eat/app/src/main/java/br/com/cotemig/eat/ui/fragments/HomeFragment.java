@@ -15,6 +15,7 @@ import br.com.cotemig.eat.app.EatApplication;
 import br.com.cotemig.eat.models.ModelDateail;
 import br.com.cotemig.eat.services.IServiceHome;
 import br.com.cotemig.eat.ui.activities.HomeActivity;
+import br.com.cotemig.eat.ui.adapters.AdapterDetail;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnItemClick;
@@ -50,11 +51,8 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-
         ButterKnife.bind(this, view);
-
         getFindTrucks();
-
         return view;
     }
 
@@ -66,7 +64,10 @@ public class HomeFragment extends Fragment {
         call.enqueue(new Callback<List<ModelDateail>>() {
             @Override
             public void onResponse(Call<List<ModelDateail>> call, Response<List<ModelDateail>> response) {
+                modelDateails = response.body();
 
+                AdapterDetail adapter = new AdapterDetail(getContext(), modelDateails);
+                list.setAdapter(adapter);
             }
 
             @Override

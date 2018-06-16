@@ -60,8 +60,10 @@ public class LoginActivity extends AppCompatActivity {
         IServiceUser s = EatApplication.getInstance().getServiceUser();
 
         final ModelUser modelUser = new ModelUser();
-        modelUser.setUser(user.getText().toString());
-        modelUser.setPassword(password.getText().toString());
+//        modelUser.setUser(user.getText().toString());
+//        modelUser.setPassword(password.getText().toString());
+        modelUser.setUser("igor@araujo.work");
+        modelUser.setPassword("senha123456");
 
         Call<ModelUser> call = s.auth(modelUser);
 

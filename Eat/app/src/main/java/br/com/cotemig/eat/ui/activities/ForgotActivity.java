@@ -31,7 +31,7 @@ public class ForgotActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.btnRecover)
-    public void recoberClick() {
+    public void recoverClick() {
         recover();
     }
 

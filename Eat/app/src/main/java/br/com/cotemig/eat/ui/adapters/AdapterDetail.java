@@ -1,12 +1,18 @@
 package br.com.cotemig.eat.ui.adapters;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import br.com.cotemig.eat.R;
 import br.com.cotemig.eat.models.ModelDateail;
 import br.com.cotemig.eat.ui.fragments.DetailFragment;
 
@@ -16,10 +22,10 @@ import br.com.cotemig.eat.ui.fragments.DetailFragment;
 
 public class AdapterDetail extends BaseAdapter {
 
-    private List<ModelDateail> list;
-    private Context context;
+    Context context;
+    List<ModelDateail> list;
 
-    public AdapterDetail(List<ModelDateail> list, Context context) {
+    public AdapterDetail(Context context, List<ModelDateail> list) {
         this.list = list;
         this.context = context;
     }
@@ -45,9 +51,26 @@ public class AdapterDetail extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent                                                                                                                                                                                                                                                  ) {
 
-        //inplement view
 
-        //layout inflater
-        return convertView;
+        ModelDateail modelDateail = list.get(position);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = inflater.inflate(R.layout.item, null);
+
+        ImageView picture = view.findViewById(R.id.picture);
+        TextView name = view.findViewById(R.id.name);
+        TextView detail = view.findViewById(R.id.detail);
+        TextView latitude = view.findViewById(R.id.latitude);
+        TextView longitude = view.findViewById(R.id.longitude);
+
+        Glide.with(picture)
+                .load(modelDateail.getPicture())
+                .into(picture);
+
+        name.setText(modelDateail.getName());
+        detail.setText(modelDateail.getDetail());
+        latitude.setText(modelDateail.getLatitude());
+        longitude.setText(modelDateail.getLongitude());
+
+        return view;
     }
 }
